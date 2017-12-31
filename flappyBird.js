@@ -15,3 +15,16 @@ fg.src = "images/fg.png";
 pipeNorth.src = "images/pipeNorth.png";
 pipeSouth.src = "images/pipeSouth.png";
 
+
+// draw images
+
+function draw(){
+
+	ctx.drawImage(bg, 0, 0);
+
+
+
+}
+
+
+draw();
