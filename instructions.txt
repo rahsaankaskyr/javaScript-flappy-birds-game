@@ -14,3 +14,8 @@ Load images
 
 var imageName = new Image();
 imageName.src="images/img.png";
+
+Load audio
+
+var audioName = new Audio();
+audioName.src="audio/audio.png";
