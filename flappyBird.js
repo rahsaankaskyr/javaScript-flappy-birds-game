@@ -9,9 +9,9 @@ var fg; = new Image();
 var pipeNorth; = new Image();
 var pipeSouth; = new Image();
 
-
-
-
-
-
+birds.src = "images/bird.png";
+bg.src = "images/bg.png";
+fg.src = "images/fg.png";
+pipeNorth.src = "images/pipeNorth.png";
+pipeSouth.src = "images/pipeSouth.png";
 
