@@ -1,0 +1,4 @@
+part 1 - logic about game
+HTML5
+
+<canvas id="canvas"  width="288" height="512"></canvas>
