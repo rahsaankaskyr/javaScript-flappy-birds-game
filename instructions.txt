@@ -19,3 +19,8 @@ Load audio
 
 var audioName = new Audio();
 audioName.src="audio/audio.png";
+
+Draw images
+
+ctx.drawImage(imageName, X, Y, Width, Height);
+
