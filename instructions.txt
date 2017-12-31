@@ -13,3 +13,4 @@ var ctx = cvs.getContext('2d');
 Load images 
 
 var imageName = new Image();
+imageName.src="images/img.png";
