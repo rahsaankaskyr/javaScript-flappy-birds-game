@@ -11,8 +11,26 @@ function draw(){
 
 
 
-
+	bY+=gravity;
 	requestAnimationFrame(draw);
-	
 
+
+
+	for(var i=0; i<pipe.length; i++){
+		ctx.drawImage(pipeNorth, pipe[i].x, pipe[i].y);
+		ctx.drawImage(pipeNorth, pipe[i].x, pipe[i].y+Const);
+		
+	}
+
+}
+
+
+draw(); 
+
+
+
+var pipe = [];
+pipe[0]={
+	x:cvs.width,
+	y:0
 }
