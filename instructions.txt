@@ -6,3 +6,10 @@ HTML5
 JavaScript 
 
 Draw images to the canvas continuously
+
+var cvs = document.getElementById('canvas');
+var ctx = cvs.getContext('2d');
+
+Load images 
+
+var imageName = new Image();
