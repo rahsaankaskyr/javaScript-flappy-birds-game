@@ -10,4 +10,9 @@ function draw(){
 	ctx.drawImage(bird, bX, bY);
 
 
+
+
+	requestAnimationFrame(draw);
+	
+
 }
