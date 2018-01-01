@@ -22,6 +22,20 @@ pipeSouth.src = "images/pipeSouth.png";
 var gap = 85;
 var constant = pipeNorth.height+gap;
 
+var bX = 10;
+var bY = 150;
+
+var gravity = 1;
+
+// on key down
+
+document.addEventListener("keydown", moveUp);
+
+function moveUp(){
+
+	
+}
+
 // draw images
 
 function draw(){
@@ -32,8 +46,11 @@ function draw(){
 
     ctx.drawImage(fg,0,cvs.height - fg.height);
 
-    ctx.drawImage(bird, 10, 150);
+    ctx.drawImage(bird, bX, bY);
 
+    bY += gravity;
+
+    requestAnimationFrame(draw);
 }
 
 
