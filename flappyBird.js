@@ -32,17 +32,33 @@ var gravity = 1;
 document.addEventListener("keydown", moveUp);
 
 function moveUp(){
+	bY -= 20;
 
-	
 }
+
+// pip coordinates 
+
+var pipe = [];
+
+pip[0] = {
+	x : cvs.width;
+	y : 0
+}
+
 
 // draw images
 
 function draw(){
 
 	ctx.drawImage(bg, 0, 0);
-    ctx.drawImage(pipeNorth, 100, 0);
-    ctx.drawImage(pipeSouth, 100, 0+constant);
+
+	for(var 1 = 0; 1 < pipe.length; i++){
+		ctx.drawImage(pipeNorth, 100, 0);
+    	ctx.drawImage(pipeSouth, 100, 0+constant);
+
+	}
+
+    
 
     ctx.drawImage(fg,0,cvs.height - fg.height);
 
