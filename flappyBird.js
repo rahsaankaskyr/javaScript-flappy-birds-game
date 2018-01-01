@@ -32,7 +32,7 @@ var gravity = 1.5;
 document.addEventListener("keydown", moveUp);
 
 function moveUp(){
-	bY -= 20;
+	bY -= 25;
 
 }
 
@@ -69,6 +69,19 @@ function draw(){
 
     	}
 
+
+    	// detect collision
+
+    	if (bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width
+    		&&  (bY <= pipe[i].y + pipeNorth.height || bY+bird.height >=
+    		pipe[i].y+constant) || bY + bird.height >= cvs.height - fg.height) {
+    		location.reload(); //reload the page
+    	}
+
+    	if(pipe[i].x == 5 ){
+    		score++;
+    	}
+
 	}
 
     
@@ -78,6 +91,10 @@ function draw(){
     ctx.drawImage(bird, bX, bY);
 
     bY += gravity;
+
+    ctx.fillstyle = "#000";
+    ctx.font = "20px Verdana";
+    ctx.fillText("Score : "+score, 10, cvs.height-20)
 
     requestAnimationFrame(draw);
 }
