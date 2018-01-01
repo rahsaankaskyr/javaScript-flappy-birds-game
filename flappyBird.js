@@ -25,7 +25,7 @@ var constant = pipeNorth.height+gap;
 var bX = 10;
 var bY = 150;
 
-var gravity = 1;
+var gravity = 1.5;
 
 // on key down
 
@@ -40,8 +40,8 @@ function moveUp(){
 
 var pipe = [];
 
-pip[0] = {
-	x : cvs.width;
+pipe[0] = {
+	x : cvs.width,
 	y : 0
 }
 
@@ -52,9 +52,22 @@ function draw(){
 
 	ctx.drawImage(bg, 0, 0);
 
-	for(var 1 = 0; 1 < pipe.length; i++){
-		ctx.drawImage(pipeNorth, 100, 0);
-    	ctx.drawImage(pipeSouth, 100, 0+constant);
+	for(var i = 0; i < pipe.length; i++){
+		ctx.drawImage(pipeNorth, pipe[i].x, pipe[i].y);
+    	ctx.drawImage(pipeSouth, pipe[i].x, pipe[i].y+constant);
+
+
+    	pipe[i].x--;
+
+    	if(pipe[i].x == 125){
+    		pipe.push({
+    			x : cvs.width,
+    			y : Math.floor(Math.random()*pipeNorth.height)-
+    			pipeNorth.height
+    		});
+
+
+    	}
 
 	}
 
